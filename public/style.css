@@ -1,0 +1,99 @@
+
+body {
+    background-color: #F2F6D0
+}
+
+#wrapper {
+    border: 2px solid #4A0542;
+    border-radius: 5px;
+}
+
+#articles {
+    display: inline-block;
+    overflow: auto;
+    width: 100%;
+    height: 700px;
+    padding: 20px;
+}
+textarea,
+input {
+    display: block;
+    width: 100%;
+}
+
+input {
+    height: 36px;
+    font-size: 24px;
+    background-color: white;
+    color: black;
+}
+
+#mp {
+    color: white;
+    background-color: #4A0542;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+textarea {
+    height: 200px;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+}
+
+#head {
+    background-color: #4A0542;
+    color: #FCF5C7;
+}
+
+.art {
+    background-color: Thistle;
+    padding: 20px;
+    margin: 20px 20px 10px 20px;
+    border-radius: 5px;
+    clear: both;
+}
+
+#addNotes {
+    background-color: #4A0542;
+    color: white;
+    float: right;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#addArt {
+    background-color: #4A0542;
+    color: white;
+}
+
+.com {
+    background-color: #4A0542;
+    color: white;
+    float: right;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.removeArticle{
+    background-color: #4A0542;
+    color: white;
+    float: right;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.commentRemove{
+    font: 40px;
+    color: red;
+    float: right;
+}
+h4 {
+    background-color: #4A0542;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px;
+}

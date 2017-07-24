@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Scraping With Mongoose</title>
-    <style>
-      body { background-color: #F2F6D0 }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-      }
-      #articles {
-        display: inline-block;
-        overflow: auto;
-        width: 60%;
-        height: 700px;
-      }
-      #notes {
-        float: right;
-        width: 30%;
-      }
-      textarea, input {
-        display: block;
-        width: 100%;
-        background-color: #FCF5C7;
-      }
-      input {
-        height: 36px;
-        font-size: 24px;
-      }
-      textarea {
-        height: 200px;
-        font-size: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Scraping With Mongoose</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron" id="head">
+      <h1><strong> Mongoochee Articles </strong></h1>
+        <button type="button" id="addArt" class="btn btn-default">Scrape Articles</button>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div>
+    
+      <!--<button type="button" id="addNotes" class="btn btn-default">Add Notes</button>-->
+      <div>
+        <div id="wrapper">
+          <div id="articles"></div>
+          <!--<div id="notes"></div>-->
+        </div>
+
+
+        <!-- Modal -->
+        <div id="myModal">
+          <!--<div class="modal-dialog">
+    
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="titleModal"></h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>-->
+
+        </div>
+      </div>
+      <!--modal-->
+    </div>
+
     <script src="app.js"></script>
-  </body>
+</body>
+
 </html>

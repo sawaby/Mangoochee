@@ -13,6 +13,7 @@ var Article = require("./models/Article.js");
 // Our scraping tools
 var request = require("request");
 var cheerio = require("cheerio");
+var path = require("path");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
@@ -27,8 +28,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Make public a static dir
-app.use(express.static("public"));
-
+//app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'html');
+// app.engine('html', engines.mustache);
 // Database configuration with mongoose
 mongoose.connect("mongodb://localhost/week18day3mongoose");
 var db = mongoose.connection;
@@ -149,8 +152,24 @@ app.post("/articles/:id", function(req, res) {
     }
   });
 });
+//remove an article
+app.get("/removeArticle/:id", function(req, res){
+  Article.findOneAndRemove({"_id": req.params.id}, function(err){
+    if(err) throw err;
+    res.send("Article Removed.");
+   // res.render("/");
+   //res.sendFile(path.join(__dirname, "index.html"))
+   // res.render('index.html');
+  });
+});
 
-
+app.get("/commentRemove/:id", function(req, res){
+ 
+   Note.findOneAndRemove({"_id": req.params.id}, function(err){
+    if(err) throw err;
+    res.send("Comment Removed.");
+  });
+});
 // Listen on port 3000
 app.listen(3000, function() {
   console.log("App running on port 3000!");

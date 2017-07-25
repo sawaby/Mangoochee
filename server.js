@@ -33,11 +33,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'html');
 // app.engine('html', engines.mustache);
 // Database configuration with mongoose
-var databaseUrl = 'mongodb://localhost/week18day3mongoose';
-if(process.env.MONGODB_URL){
-  mongoose.connect(process.env.MONGODB_URL);
+var databaseUri = 'mongodb://localhost/week18day3mongoose';
+if(process.env.MONGODB_URI){
+  mongoose.connect(process.env.MONGODB_URI);
 }else{
-  mongoose.connect(databaseUrl);
+  mongoose.connect(databaseUri);
 }
 //mongoose.connect("mongodb://localhost/week18day3mongoose");
 var db = mongoose.connection;
